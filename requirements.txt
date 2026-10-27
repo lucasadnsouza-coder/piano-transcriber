@@ -1,0 +1,34 @@
+# Instale nesta ordem (o instalar.ps1 faz tudo isso):
+#   1. PyTorch - com GPU NVIDIA:
+#        pip install torch torchaudio --index-url https://download.pytorch.org/whl/cu128
+#      so CPU:
+#        pip install torch torchaudio
+#   2. Transkun sem dependencias (o pacote "ncls" que ele pede so serve para treino
+#      e nao compila no Windows):
+#        pip install --no-deps transkun==2.0.1
+#   3. O resto:
+#        pip install -r requirements.txt
+
+# dependencias de execucao do Transkun
+moduleconf==0.1.4
+pretty_midi==0.2.11.post0
+mir_eval==0.8.2
+scipy==1.18.1
+soxr==1.1.0
+
+# deteccao de tempos e compassos
+beat-this==1.1.0
+einops==0.8.2
+rotary-embedding-torch==0.9.1
+
+# download e audio
+yt-dlp[default]==2026.10.21
+deno==2.9.8
+imageio-ffmpeg==0.6.0
+soundfile==0.14.0
+numpy==2.5.4
+
+# partitura e MIDI
+music21==10.5.1
+mido==1.3.3
+verovio==6.3.0
